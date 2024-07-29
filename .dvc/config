@@ -1,0 +1,4 @@
+[core]
+    remote = my-storage
+['remote "my-storage"']
+    url = s3://kashif-mini-project

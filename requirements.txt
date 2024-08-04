@@ -18,7 +18,7 @@ awscli
 backoff==2.2.1
 billiard==4.2.0
 blinker==1.8.2
-boto3
+boto3==1.34.131
 botocore  # Adjusted to match aiobotocore's requirement
 cachetools==5.4.0
 celery==5.4.0

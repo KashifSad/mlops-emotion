@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 
 model_name = "my_model"
-model_version = 1
+model_version = 2
 
 model_uri = f"models:/{model_name}/{model_version}"
 model = mlflow.pyfunc.load_model(model_uri)

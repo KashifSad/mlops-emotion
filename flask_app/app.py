@@ -10,21 +10,21 @@ import pandas as pd
 # dagshub.init(repo_owner='KashifSad', repo_name='mlops-emotion', mlflow=True)
 
 
-def promote_model():
+
     # Set up DagsHub credentials for MLflow tracking
-    dagshub_token = os.getenv("DAGSHUB_PAT")
-    if not dagshub_token:
-        raise EnvironmentError("DAGSHUB_PAT environment variable is not set")
+dagshub_token = os.getenv("DAGSHUB_PAT")
+if not dagshub_token:
+    raise EnvironmentError("DAGSHUB_PAT environment variable is not set")
 
-    os.environ["MLFLOW_TRACKING_USERNAME"] = dagshub_token
-    os.environ["MLFLOW_TRACKING_PASSWORD"] = dagshub_token
+os.environ["MLFLOW_TRACKING_USERNAME"] = dagshub_token
+os.environ["MLFLOW_TRACKING_PASSWORD"] = dagshub_token
 
-    dagshub_url = "https://dagshub.com"
-    repo_owner = "KashifSad"
-    repo_name = "mlops-emotion"
+dagshub_url = "https://dagshub.com"
+repo_owner = "KashifSad"
+repo_name = "mlops-emotion"
 
     # Set up MLflow tracking URI
-    mlflow.set_tracking_uri(f'{dagshub_url}/{repo_owner}/{repo_name}.mlflow')
+mlflow.set_tracking_uri(f'{dagshub_url}/{repo_owner}/{repo_name}.mlflow')
 
 
 app = Flask(__name__)

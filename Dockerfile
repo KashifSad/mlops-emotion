@@ -14,4 +14,6 @@ ENV PYTHONPATH=/app
 
 EXPOSE 5000
 
-CMD ["python","flask_app/app.py","0.0.0.0:5000"]
+#CMD ["gunicorn","-b","0.0.0.0:5000","flask_app.app:app"]
+
+CMD ["python","flask_app.app.py","0.0.0.0:5000"]

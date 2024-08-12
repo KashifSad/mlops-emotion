@@ -8,6 +8,8 @@ COPY models/vectorizer.pkl /app/models/vectorizer.pkl
 RUN pip install -r requirements.txt
 RUN python -m nltk.downloader stopwords wordnet
 
+ENV PYTHONPATH=/app
+
 EXPOSE 5000
 
 CMD ["gunicorn","-b","0.0.0.0:5000","flask_app.app:app"]

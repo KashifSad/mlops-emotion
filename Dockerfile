@@ -14,4 +14,4 @@ ENV PYTHONPATH=/app
 
 EXPOSE 5000
 
-CMD ["python","app.py","0.0.0.0:5000"]
+CMD ["python","flask_app/app.py","0.0.0.0:5000"]
